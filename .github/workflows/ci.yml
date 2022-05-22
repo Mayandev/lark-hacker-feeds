@@ -40,4 +40,7 @@ jobs:
 
       - run: |
           yarn install
-          PH_ACCESS_TOKEN='${{ secrets.PH_ACCESS_TOKEN }}'  LARK_ID='${{ secrets.LARK_HOOK_URL }}' node index.js
+      
+      - name: Send Push
+        run: |
+          PH_ACCESS_TOKEN='${{ secrets.PH_ACCESS_TOKEN }}'  LARK_HOOK_URL='${{ secrets.LARK_HOOK_URL }}' node index.js
