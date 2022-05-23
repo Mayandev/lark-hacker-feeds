@@ -46,7 +46,7 @@ async function postLarkMsg() {
       ...products.map((item, index) => ({
         tag: "div",
         text: {
-          content: `[${index+1}. ${item.name}](${item.url})\n${item.tagline}`,
+          content: `[${index+1}. ${item.name}](${item.url}) - ▲${item.votesCount}\n${item.tagline}`,
           tag: "lark_md"
         }
       })),
