@@ -5,8 +5,8 @@ const { formatDate, getAfterNDayDate, getBeforeNDayDate } = require('./date');
 async function fetchProductHunt() {
   const url = 'https://api.producthunt.com/v2/api/graphql/';
   const time = formatDate(new Date());
-  const beforeOneDay = getBeforeNDayDate(time, 0);
-  const afterOneDay = getAfterNDayDate(time, 1);
+  const beforeOneDay = getBeforeNDayDate(time, 1);
+  const afterOneDay = getAfterNDayDate(time, 0);
   const reqOptions = {
     url,
     headers: {
