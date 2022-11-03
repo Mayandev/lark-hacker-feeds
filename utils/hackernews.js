@@ -2,7 +2,7 @@ const axios = require('axios');
 
 
 async function fetchHackerNews() {
-  const url = `https://hacker-news.firebaseio.com/v0/showstories.json`;
+  const url = `https://hacker-news.firebaseio.com/v0/topstories.json`;
   const { data = [] } = await axios.get(url);
   const promises = data
       .slice(0, 10)
